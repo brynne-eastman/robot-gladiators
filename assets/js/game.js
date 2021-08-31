@@ -1,3 +1,16 @@
+//Game States
+//"WIN" - Player robot has defeated all enemy-robots
+//  * Fight all enemy-robots
+//  * Defeat each enemy-robot
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+console.log(enemyNames);
+console.log(enemyNames[0]);
+console.log(enemyNames[1]);
+console.log(enemyNames[2]);
+console.log(enemyNames.length);
+
+//"LOSE" - Player robot's health is zero or less
+
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
@@ -44,21 +57,22 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 
     //if player choses to skip
 } else if (promptFight === "skip" || promptFight === "SKIP") {
-    // confirm player wants to skip
-    var confirmSkip = window.confirm("Are you sure you'd like to quit?");
+      // confirm player wants to skip
+  var confirmSkip = window.confirm("Are you sure you'd like to quit?");
 
-    //if yes (true), leave fight
-    if (confirmSkip) { 
-        window.alert(playerName + " has decided to skip this fight. Goodbye!");
-        //subtract money from playerMoney for skipping
-        playerMoney = playerMoney - 2;
-    }
-    //if no (false), ask question again by running fight() again
-    else { 
-        fight();
-    }
+  // if yes (true), leave fight
+  if (confirmSkip) {
+    window.alert(playerName + " has decided to skip this fight. Goodbye!");
+    // subtract money from playerMoney for skipping
+    playerMoney = playerMoney - 2;
+  }
+  // if no (false), ask question again by running fight() again
+  else {
+    fight();
+  }
 }
+
     
 };
 
-fight();
+//fight();
